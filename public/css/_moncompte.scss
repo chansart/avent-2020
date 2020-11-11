@@ -1,0 +1,165 @@
+.moncompte-container{
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+.calendar-moncompte{
+    background-color: rgba(255,255,255,0.8);
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+      
+    }
+.layout-carre-moncompte, .layout-destructure-moncompte{
+    background-size: contain;
+    height: 100px;
+    .cell,.cell-carre{
+        padding: 1px;
+        .day{
+        
+        font-size: 10px;
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        }
+    }
+}
+.calendar-info{
+    padding-left:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title-calendar-moncompte{
+        font-size: 17px;
+        font-weight: bold;
+        display: flex;
+        margin-bottom: 10px;
+        align-items: flex-start;
+        justify-content: space-between;
+        .calendar-date{
+            margin: 0;
+            margin-top: 2px;
+            color: rgb(151, 151, 151);
+            font-weight: lighter;
+            font-size: 15px;
+        }
+        .calendar-title{
+            display: flex;
+            align-items: center;
+            margin: 0;
+            span{
+                height: 30px;
+                width: 30px;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 5px;
+                color: white;
+            }
+        }
+        form{
+            button{
+                color: white;
+                border: none;
+                height: 30px;
+                width: 30px;
+                border-radius: 50px;
+                font-size: 12px;
+                background-color:
+                 #601632;
+                 cursor: pointer;
+                &:hover{
+                    background-color: rgb(170, 28, 82);
+                }
+            }
+        }
+    }
+}
+form{
+    .delete-calendar{
+        background-color: transparent;
+        border: none;
+        color: red;
+        outline:none
+    }
+}
+.buttons-action{
+    display: flex;
+    button{
+        cursor: pointer;
+        
+    }
+    .delete-calendar{
+        background-color: transparent;
+        border: none;
+        color: red;
+        outline:none;
+        padding: 7px 15px 7px 0;
+        &:hover{
+            color: rgb(179, 12, 12);
+        }
+    }
+    .update-calendar, .preview-calendar {
+        color: white;
+        padding: 7px 15px;
+        margin-right: 10px;
+        border: none;
+        outline: none;
+        background-color: #601632;
+        &:hover{
+            background-color: #aa1c52;
+        }
+        
+    }
+}
+h3{
+    margin: 0 0 15px 0;
+}
+.col2-moncompte{
+    padding: 15px;
+    padding-top: 54px;
+    padding-right: 0;
+}
+.col1-moncompte{
+    padding: 15px 0;
+}
+.new-calendar{
+    background-color: #601632;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(170, 28, 82);
+    }
+    h2{
+        margin: 0;
+        font-size: 15px;
+        font-weight: normal;
+    }
+    input{
+        margin-top: 5px ;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 5px;
+        &:focus{
+            outline: none;
+        }
+    }
+    button{
+        background-color: white;
+        color: #601632;
+        margin-top: 5px;
+        padding: 7px 15px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:hover{
+            background-color: #601632;
+            color: white;
+        }
+    }
+}
