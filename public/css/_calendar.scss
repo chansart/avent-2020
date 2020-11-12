@@ -170,6 +170,53 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    label{
+      margin-bottom: 5px;
+    }
+    input{
+      width: 100%;
+      padding: 5px;
+      border: none;
+      box-shadow: 2px 2px 2px rgba(56, 56, 56, 0.3);
+      margin-bottom: 5px;
+      &:focus{
+        outline: none;
+      }
+    }
+    select{
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 100%;
+      border: none;
+      box-shadow: 2px 2px 2px rgba(56, 56, 56, 0.3);
+      &:focus{
+        outline: none;
+      }
+    }
+    textarea{
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 100%;
+      border: none;
+      box-shadow: 2px 2px 2px rgba(56, 56, 56, 0.3);
+      &:focus{
+        outline: none;
+      }
+
+    }
+    button{
+      margin-bottom: 10px;
+      padding: 5px;
+      border: none;
+      box-shadow: 2px 2px 2px rgba(56, 56, 56, 0.3);
+      &:hover{
+        background-color: rgb(233, 233, 233);
+        box-shadow: none;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
   }
 }
 .day {

@@ -9,13 +9,15 @@ function messageType($jour){
     $donneetype = $tabCalendarAAfficher[0]['calendar_'.$jour.'_type'];
     if($donneejour ===""){
       $x = 'Vous n\'avez encore rien rentré';
-    }else if($donneetype === "url-image" ||$donneetype === "image"){
-        $x = '<img src="uploads/'.$donneejour.'">';
-    }else if($donneetype === "url-video"){
+    }else if($donneetype === "url-image" ){
+        $x = '<img src="'.$donneejour.'">';
+    }else if($donneetype === "image"){
+      $x = '<img src="uploads/'.$donneejour.'">';
+  }else if($donneetype === "url-vidéo"){
         $x = '<iframe width="150" height="100"
         src="'.$donneejour.'">
         </iframe>';
-    }else if($donneetype === "video"){
+    }else if($donneetype === "vidéo"){
         $x = '<video width="320" height="240" controls>
         <source src="uploads/'.$donneejour.'">
     </video>';

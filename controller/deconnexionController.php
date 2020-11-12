@@ -4,5 +4,5 @@
     // supprimer la session
     session_destroy();
     // rediriger
-    header("Location:?section=connexion");
+    header("Location:?section=accueil");
 ?>

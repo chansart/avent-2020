@@ -189,6 +189,52 @@ main {
   align-items: center;
   justify-content: center;
 }
+.modal form label {
+  margin-bottom: 5px;
+}
+.modal form input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  box-shadow: 2px 2px 2px rgba(56, 56, 56, 0.3);
+  margin-bottom: 5px;
+}
+.modal form input:focus {
+  outline: none;
+}
+.modal form select {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  box-shadow: 2px 2px 2px rgba(56, 56, 56, 0.3);
+}
+.modal form select:focus {
+  outline: none;
+}
+.modal form textarea {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  box-shadow: 2px 2px 2px rgba(56, 56, 56, 0.3);
+}
+.modal form textarea:focus {
+  outline: none;
+}
+.modal form button {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+  box-shadow: 2px 2px 2px rgba(56, 56, 56, 0.3);
+}
+.modal form button:hover {
+  background-color: #e9e9e9;
+  box-shadow: none;
+}
+.modal form button:focus {
+  outline: none;
+}
 
 .day {
   padding: 5px;
@@ -496,6 +542,22 @@ h3 {
   color: white;
 }
 
+.sharing-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(56, 56, 56, 0.7);
+  z-index: 9;
+}
+
 .col-container {
   display: flex;
 }
@@ -668,6 +730,11 @@ header nav ul li a::before {
 header nav ul li a:hover::before {
   width: 100%;
   transition: all 0.3s;
+}
+
+h1 {
+  margin: 0;
+  padding: 15px 0;
 }
 
 /*# sourceMappingURL=style-principal.css.map */

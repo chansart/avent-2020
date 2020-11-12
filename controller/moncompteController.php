@@ -18,15 +18,38 @@ $myCalendars="";
 
 //  afficher chaque calendrier
 foreach ($tabCalendars as $calendar){
-    $myCalendars .="<div class='calendar-moncompte w-100'><div class='".$calendar['calendar_layout']."-moncompte w-20' style='background-image:url(public/image/".$calendar['calendar_background'].".jpg)'></div><div class='calendar-info w-80'><div class='title-calendar-moncompte w-100'><div><p class='calendar-title'>". $calendar['calendar_title']."</p><p class='calendar-date'>". $calendar['calendar_date']."</p></div><form action='#' method='post'>
-    <input type='hidden' name='name' value='". $calendar['calendar_id']."'>
-    <button type='submit' ><i class='fas fa-share-alt'></i></button></form></div><div class='buttons-action'><form action='#' method='post'>
-    <input type='hidden' name='delete-calendar' value='". $calendar['calendar_id']."'>
-    <button type='submit' class='delete-calendar'>Supprimer <i class='fas fa-trash-alt'></i></button></form><form action='#' method='post'>
-    <input type='hidden' name='update-calendar' value='". $calendar['calendar_id']."'>
-    <button  type='submit' class='update-calendar'>Modifier</button></form><form action='#' method='post'>
-    <input type='hidden' name='preview-calendar' value='". $calendar['calendar_id']."'>
-    <button  type='submit' class='preview-calendar'>Aperçu</button></form></div></div></div>";
+    $myCalendars .="<div class='calendar-moncompte w-100'>
+                        <div class='".$calendar['calendar_layout']."-moncompte w-20' style='background-image:url(public/image/".$calendar['calendar_background'].".jpg)'></div>
+                        <div class='calendar-info w-80'>
+                            <div class='title-calendar-moncompte w-100'>
+                                <div>
+                                    <p class='calendar-title'>". $calendar['calendar_title']."</p>
+                                    <p class='calendar-date'>". $calendar['calendar_date']."</p>
+                                </div>
+                                <div class='share-calendar'>
+                                    <i class='fas fa-share-alt'></i>
+                                </div>
+                                <div class='sharing-link' style='display:none'>
+                                    <i class='fas fa-times closed'></i>
+                                    <p>Voici le lien à partager avec vos amis: </p><a href='calendarGift.php?icfu=". $calendar['calendar_id']."&ampview=".$calendar['calendar_layout']."'>avent-2020/calendarGift.php?icfu=". $calendar['calendar_id']."&ampview=".$calendar['calendar_layout']."</a>
+                                </div>
+                            </div>
+                            <div class='buttons-action'>
+                                <form action='#' method='post'>
+                                    <input type='hidden' name='delete-calendar' value='". $calendar['calendar_id']."'>
+                                    <button type='submit' class='delete-calendar'>Supprimer <i class='fas fa-trash-alt'></i></button>
+                                </form>
+                                <form action='#' method='post'>
+                                    <input type='hidden' name='update-calendar' value='". $calendar['calendar_id']."'>
+                                    <button  type='submit' class='update-calendar'>Modifier</button>
+                                </form>
+                                <form action='#' method='post'>
+                                    <input type='hidden' name='preview-calendar' value='". $calendar['calendar_id']."'>
+                                    <button  type='submit' class='preview-calendar'>Aperçu</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>";
 }
 
 // créer un nouveau calendrier- titre du calendrier

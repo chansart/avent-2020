@@ -100,3 +100,9 @@ if($('.layout-carre-moncompte')){
         });
       });
 }
+$('.share-calendar').on('click', function(){
+  $(this).siblings('.sharing-link').css({'display':'flex'});
+})
+$('.closed').on('click', function(){
+  $('.sharing-link').css({'display':'none'});
+})

@@ -6,13 +6,15 @@
     for ($i = 1; $i <= 24; $i++) {
         if($tabCalendarAAfficher[0]['calendar_'.$i.''] ===""){
             $x = 'Vous n\'avez encore rien rentré';
-        }else if($tabCalendarAAfficher[0]['calendar_'.$i.'_type'] === "url-image" ||$tabCalendarAAfficher[0]['calendar_'.$i.'_type'] === "image"){
+        }else if($tabCalendarAAfficher[0]['calendar_'.$i.'_type'] === "url-image"){
+            $x = '<img src="'.$tabCalendarAAfficher[0]['calendar_'.$i.''].'">';
+        }else if($tabCalendarAAfficher[0]['calendar_'.$i.'_type'] === "image"){
             $x = '<img src="uploads/'.$tabCalendarAAfficher[0]['calendar_'.$i.''].'">';
-        }else if($tabCalendarAAfficher[0]['calendar_'.$i.'_type'] === "url-video"){
+        }else if($tabCalendarAAfficher[0]['calendar_'.$i.'_type'] === "url-vidéo"){
             $x = '<iframe width="150" height="100"
             src="'.$tabCalendarAAfficher[0]['calendar_'.$i.''].'">
             </iframe>';
-        }else if($tabCalendarAAfficher[0]['calendar_'.$i.'_type'] === "video"){
+        }else if($tabCalendarAAfficher[0]['calendar_'.$i.'_type'] === "vidéo"){
             $x = '<video width="320" height="240" controls>
             <source src="uploads/'.$tabCalendarAAfficher[0]['calendar_'.$i.''].'">
         </video>';

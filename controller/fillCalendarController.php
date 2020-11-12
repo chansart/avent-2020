@@ -24,13 +24,15 @@ $layoutCalendar = $tabCalendarAAfficher[0]['calendar_layout'];
 foreach ($daysOfDecember as $dayOfDecember){
     if($tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.''] ===""){
         $x = 'Vous n\'avez encore rien rentré';
-    }else if($tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.'_type'] === "url-image" ||$tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.'_type'] === "image"){
+    }else if($tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.'_type'] === "image"){
         $x = '<img src="uploads/'.$tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.''].'">';
-    }else if($tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.'_type'] === "url-video"){
+    }else if($tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.'_type'] === "url-image"){
+        $x = '<img src="'.$tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.''].'">';
+    }else if($tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.'_type'] === "url-vidéo"){
         $x = '<iframe width="150" height="100"
         src="'.$tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.''].'">
         </iframe>';
-    }else if($tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.'_type'] === "video"){
+    }else if($tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.'_type'] === "vidéo"){
         $x = '<video width="320" height="240" controls>
         <source src="uploads/'.$tabCalendarAAfficher[0]['calendar_'.$dayOfDecember.''].'">
       </video>';

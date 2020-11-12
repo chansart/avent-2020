@@ -2,6 +2,7 @@
 // trouver le calendrier à afficher
     $c = new Calendar();
     $tabCalendarAAfficher = $c->readCalendar($_SESSION['calendrier_a_afficher']);
+        
     $calendarPreview="";
     if($_SESSION['background']!== $tabCalendarAAfficher[0]['calendar_background']){
         $_SESSION['background']=$tabCalendarAAfficher[0]['calendar_background'];

@@ -9,7 +9,6 @@ $('.overlay').css({'display':'none'});
 
 // modifier le container en fonction du layout
 if($('.layout-carre')){
-  console.log("hello");
   $("#calendar-container").css({
     display: "flex",
     "flex-wrap": "wrap",
@@ -33,10 +32,10 @@ $(".cell").each(function () {
             <option value="">Choississez une option</option>
             <option value="texte">Texte</option>
             <option value="image">Image</option>
-            <option value="video">Vidéo</option>
+            <option value="vidéo">Vidéo</option>
             <option value="hyperlien">Hyperlien</option> 
             <option value="url-image">Url de l'image</option> 
-            <option value="url-video">Url de la vidéo</option>   
+            <option value="url-vidéo">Url de la vidéo</option>   
         </select></form></div>`);
         // on peut fermer la modal avec la croix
         $('.closed').on('click', function(){
@@ -44,20 +43,21 @@ $(".cell").each(function () {
           $('.overlay').css({'display':'none'});
       })
       // une fois le premier choix fait, on a un deuxieme form qui apparait
+      $('.form-modal').append(`<div class="form2"></div>`);
         $('.message-select').on('click', function () {
-          console.log(idxModal);
           if($(this).val() !==""){
-            $('.form-modal').append(`<label for="message">Votre message<br/> pour le ${idxModal} décembre: </label>`);
+            $('.form2').html(`<label for="message">Votre ${$(this).val()}<br/> pour le ${idxModal} décembre: </label>`);
             if($(this).val() === "texte" || $(this).val() === "hyperlien" ){
-              $('.form-modal').append(`<textarea class="message-texte" name="message-${idxModal}"></textarea>`);
+              $('.form2').append(`<textarea class="message-texte" name="message-${idxModal}"></textarea>`);
             }
-            if($(this).val() === "url-image" || $(this).val() === "url-video" ){
-              $('.form-modal').append(`<input type="url" class="message-texte" name="message-${idxModal}">`);
+            if($(this).val() === "url-image" || $(this).val() === "url-vidéo" ){
+              $('.form2').append(`<input type="url" class="message-texte" name="message-${idxModal}">`);
             }
-            if($(this).val() === "image" || $(this).val() === "video" ){
-              $('.form-modal').append(`<input type="file" class="message-texte" name="file-${idxModal}">`);
+            if($(this).val() === "image" || $(this).val() === "vidéo" ){
+              $('.form2').append(`<input type="file" class="message-texte" name="file-${idxModal}">`);
             }
-            $('.form-modal').append(`<input type="hidden" name="update" value="${idxModal}"><button class="valider" type="submit">Valider</button>`);
+            $('.form2').append(`<input type="hidden" name="update" value="${idxModal}"><button class="valider" type="submit">Valider</button>`);
+            
           }
           
       });
