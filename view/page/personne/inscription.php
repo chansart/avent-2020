@@ -10,7 +10,7 @@
                 <label>Adresse e-mail:</label>
                 <input type="text" name="email" required>
                 <label>Mot de passe:</label>
-                <input id="iptMdp" type="text" name="mdp" required>
+                <input id="iptMdp" type="password" name="mdp" required>
                 <button type="submit">S'inscrire</button>
                 <p>Déjà inscris? <span class="bold"> <a href="?section=connexion">Connecte-toi !</a> </span></p>
             </form>

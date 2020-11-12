@@ -7,7 +7,7 @@
                 <label>E-mail:</label>
                 <input type="text" name="email" required>
                 <label>Mot de passe:</label>
-                <input type="text" name="mdpUser" required>
+                <input type="password" name="mdpUser" required>
                 <button type="submit">Se connecter</button>
                 <p class="bold msgErreur"><?= $messageMdp; ?></p>
                 <p>Pas encore de compte? <span class="bold"> <a href="?section=inscription">Inscris-toi !</a> </span></p>
